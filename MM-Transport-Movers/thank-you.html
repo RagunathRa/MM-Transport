@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You!</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    /* Full-screen gradient background */
+    body {
+      background: linear-gradient(135deg, #e0f7fa 0%, #e8f5e9 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+    }
+    /* Card styling */
+    .thank-you-card {
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+      width: 90%;
+      padding: 40px 30px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    /* Animated confetti circles */
+    .confetti {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background-color: #f44336;
+      border-radius: 50%;
+      top: -10px;
+      animation: fall 3s infinite ease-in;
+    }
+    .confetti:nth-child(2) { left: 20%; background-color: #ffeb3b; animation-delay: 0.5s; }
+    .confetti:nth-child(3) { left: 40%; background-color: #4caf50; animation-delay: 1s; }
+    .confetti:nth-child(4) { left: 60%; background-color: #2196f3; animation-delay: 1.5s; }
+    .confetti:nth-child(5) { left: 80%; background-color: #ff9800; animation-delay: 2s; }
+    @keyframes fall {
+      0% { transform: translateY(0) scale(1); opacity: 1; }
+      100% { transform: translateY(500px) scale(0.5); opacity: 0; }
+    }
+    /* Heading */
+    .thank-you-card h1 {
+      color: #2e7d32;
+      font-size: 2.75rem;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .thank-you-card h1 .bi-check-circle-fill {
+      font-size: 3rem;
+      margin-right: 10px;
+      color: #66bb6a;
+      animation: bounce 1.5s infinite;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    .thank-you-card p {
+      font-size: 1.1rem;
+      color: #555555;
+      margin-bottom: 30px;
+    }
+    /* Gradient button */
+    .btn-home {
+      padding: 12px 30px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 50px;
+      background: linear-gradient(45deg, #43a047, #66bb6a);
+      color: #ffffff;
+      transition: transform 0.3s;
+    }
+    .btn-home:hover {
+      transform: scale(1.05);
+      text-decoration: none;
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="thank-you-card">
+    <!-- Confetti circles -->
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+
+    <!-- Icon + Heading --> <p class="fs-2 p-0">🎉</p>
+    <h1><i class="bi bi-check-circle-fill"></i>   Thank You!  </h1>
+    <p>Your request has been submitted successfully.<br>Our team will get in touch with you shortly.</p>
+
+    <!-- Return button -->
+    <a href="index.html" class="btn btn-home">Back to Home</a>
+  </div>
+
+  <!-- Bootstrap JS (optional) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
